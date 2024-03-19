@@ -36,7 +36,7 @@ public class PartidaService {
             throw new RuntimeException("Campeonato não encontrado.");
         } else if (partida.getPlacarMandante() < 0 || partida.getPlacarVisitante() < 0) {
             throw new RuntimeException("Placar inválido.");
-        } else if (partida.getTimeMandante() == partida.getTimeVisitante()) {
+        } else if (partida.getTimeMandante().equals(partida.getTimeVisitante())) {
             throw new RuntimeException("Times iguais.");
         }
         else {
